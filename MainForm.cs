@@ -16,7 +16,8 @@ namespace EncryptorRevamp
             "Input:",
             "Encrypt",
             "Decrypt",
-            "Output:"
+            "Output:",
+            "Clear Output"
         };
         readonly string[] langRU = {
             "Код:", // Key
@@ -24,7 +25,8 @@ namespace EncryptorRevamp
             "Входной:", // Input
             "Кодировать", // Encode
             "Декодировать", // Decode
-            "Результатов:" // Output
+            "Результатов:", // Output
+            "Удалять текст" // Remove Text
         };
 
 
@@ -43,6 +45,10 @@ namespace EncryptorRevamp
         private void encryptButton_Click(object sender, EventArgs e)
         {
             string[] data = { textInput.Text, key };
+            if (textInput.Text == "")
+            {
+                data[0] = outputBox.Text;
+            }
             textInput.Text = "";
             Encryption enc = new Encryption(data);
             output = enc.GetOutput();
@@ -53,6 +59,10 @@ namespace EncryptorRevamp
         private void decryptButton_Click(object sender, EventArgs e)
         {
             string[] data = { textInput.Text, key };
+            if (textInput.Text == "")
+            {
+                data[0] = outputBox.Text;
+            }
             textInput.Text = "";
             Decryption enc = new Decryption(data);
             output = enc.GetOutput();
@@ -69,11 +79,12 @@ namespace EncryptorRevamp
             encryptButton.Text = langEN[3];
             decryptButton.Text = langEN[4];
             outputLabel.Text = langEN[5];
+            outputClearBtn.Text = langEN[6];
         }
 
         private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Size = new Size(defaultSize.Width + 40, defaultSize.Height);  
+            Size = new Size(defaultSize.Width + 30, defaultSize.Height);
 
             keyLabel.Text = langRU[0];
             keySubmit.Text = langRU[1];
@@ -81,6 +92,12 @@ namespace EncryptorRevamp
             encryptButton.Text = langRU[3];
             decryptButton.Text = langRU[4];
             outputLabel.Text = langRU[5];
+            outputClearBtn.Text = langRU[6];
+        }
+
+        private void outputClear_Click(object sender, EventArgs e)
+        {
+            outputBox.Text = "";
         }
     }
     public class Encryption
