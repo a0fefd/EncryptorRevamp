@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -6,8 +7,10 @@ namespace EncryptorRevamp
 {
     public partial class MainForm : Form
     {
+        [AllowNull]
         string key, output;
-        string[] langEN = {
+        Size defaultSize;
+        readonly string[] langEN = {
             "Key:",
             "Submit",
             "Input:",
@@ -15,7 +18,7 @@ namespace EncryptorRevamp
             "Decrypt",
             "Output:"
         };
-        string[] langRU = {
+        readonly string[] langRU = {
             "Код:", // Key
             "Выбрать", // Submit
             "Входной:", // Input
@@ -28,6 +31,7 @@ namespace EncryptorRevamp
         public MainForm()
         {
             InitializeComponent();
+            defaultSize = Size;
         }
 
         private void keySubmit_Click(object sender, EventArgs e)
@@ -57,6 +61,8 @@ namespace EncryptorRevamp
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Size = defaultSize;
+
             keyLabel.Text = langEN[0];
             keySubmit.Text = langEN[1];
             inputLabel.Text = langEN[2];
@@ -67,6 +73,8 @@ namespace EncryptorRevamp
 
         private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Size = new Size(defaultSize.Width + 40, defaultSize.Height);  
+
             keyLabel.Text = langRU[0];
             keySubmit.Text = langRU[1];
             inputLabel.Text = langRU[2];
