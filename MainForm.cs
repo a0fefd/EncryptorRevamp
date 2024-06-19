@@ -32,8 +32,8 @@ namespace EncryptorRevamp
             "Sleutel:",
             "Voorleggen",
             "Invoer:",
-            "Versleutelen",
-            "Ontcijferen",
+            "Versleutel",
+            "Ontcijfer",
             "Uitvoer:",
             "Duidelijk Uitvoer"
         };
