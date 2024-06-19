@@ -30,7 +30,7 @@ namespace EncryptorRevamp
         };
         readonly string[] langNL = {
             "Sleutel:",
-            "Voorleggen",
+            "Voorleg",
             "Invoer:",
             "Versleutel",
             "Ontcijfer",
@@ -110,7 +110,7 @@ namespace EncryptorRevamp
 
         private void nederlandsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Size = defaultSize;
+            Size = new Size(defaultSize.Width + 4, defaultSize.Height);
 
             keyLabel.Text = langNL[0];
             keySubmit.Text = langNL[1];

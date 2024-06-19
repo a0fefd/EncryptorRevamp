@@ -41,15 +41,15 @@
             languageToolStripMenuItem = new ToolStripMenuItem();
             englisToolStripMenuItem = new ToolStripMenuItem();
             русскийToolStripMenuItem = new ToolStripMenuItem();
-            outputClearBtn = new Button();
             nederlandsToolStripMenuItem = new ToolStripMenuItem();
+            outputClearBtn = new Button();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // keyInput
             // 
             keyInput.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            keyInput.Location = new Point(48, 32);
+            keyInput.Location = new Point(44, 32);
             keyInput.Margin = new Padding(3, 2, 3, 2);
             keyInput.Name = "keyInput";
             keyInput.Size = new Size(252, 23);
@@ -67,10 +67,10 @@
             // keySubmit
             // 
             keySubmit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            keySubmit.Location = new Point(304, 32);
+            keySubmit.Location = new Point(302, 32);
             keySubmit.Margin = new Padding(3, 2, 3, 2);
             keySubmit.Name = "keySubmit";
-            keySubmit.Size = new Size(60, 24);
+            keySubmit.Size = new Size(88, 24);
             keySubmit.TabIndex = 2;
             keySubmit.Text = "Submit";
             keySubmit.UseVisualStyleBackColor = true;
@@ -88,20 +88,20 @@
             // textInput
             // 
             textInput.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textInput.Location = new Point(48, 60);
+            textInput.Location = new Point(44, 60);
             textInput.Margin = new Padding(3, 2, 3, 2);
             textInput.Multiline = true;
             textInput.Name = "textInput";
-            textInput.Size = new Size(316, 212);
+            textInput.Size = new Size(345, 212);
             textInput.TabIndex = 4;
             // 
             // encryptButton
             // 
             encryptButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            encryptButton.Location = new Point(48, 276);
+            encryptButton.Location = new Point(44, 276);
             encryptButton.Margin = new Padding(3, 2, 3, 2);
             encryptButton.Name = "encryptButton";
-            encryptButton.Size = new Size(156, 22);
+            encryptButton.Size = new Size(173, 22);
             encryptButton.TabIndex = 5;
             encryptButton.Text = "Encrypt";
             encryptButton.UseVisualStyleBackColor = true;
@@ -110,10 +110,10 @@
             // decryptButton
             // 
             decryptButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            decryptButton.Location = new Point(209, 276);
+            decryptButton.Location = new Point(223, 276);
             decryptButton.Margin = new Padding(3, 2, 3, 2);
             decryptButton.Name = "decryptButton";
-            decryptButton.Size = new Size(155, 22);
+            decryptButton.Size = new Size(167, 22);
             decryptButton.TabIndex = 6;
             decryptButton.Text = "Decrypt";
             decryptButton.UseVisualStyleBackColor = true;
@@ -131,11 +131,11 @@
             // outputBox
             // 
             outputBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            outputBox.Location = new Point(48, 304);
+            outputBox.Location = new Point(44, 304);
             outputBox.Margin = new Padding(3, 2, 3, 2);
             outputBox.Multiline = true;
             outputBox.Name = "outputBox";
-            outputBox.Size = new Size(316, 306);
+            outputBox.Size = new Size(345, 306);
             outputBox.TabIndex = 8;
             // 
             // menuStrip
@@ -145,7 +145,7 @@
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new Padding(5, 2, 0, 2);
-            menuStrip.Size = new Size(375, 24);
+            menuStrip.Size = new Size(401, 24);
             menuStrip.TabIndex = 9;
             menuStrip.Text = "menuStrip";
             // 
@@ -159,41 +159,41 @@
             // englisToolStripMenuItem
             // 
             englisToolStripMenuItem.Name = "englisToolStripMenuItem";
-            englisToolStripMenuItem.Size = new Size(180, 22);
+            englisToolStripMenuItem.Size = new Size(134, 22);
             englisToolStripMenuItem.Text = "English";
             englisToolStripMenuItem.Click += englishToolStripMenuItem_Click;
             // 
             // русскийToolStripMenuItem
             // 
             русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
-            русскийToolStripMenuItem.Size = new Size(180, 22);
+            русскийToolStripMenuItem.Size = new Size(134, 22);
             русскийToolStripMenuItem.Text = "Русский";
             русскийToolStripMenuItem.Click += русскийToolStripMenuItem_Click;
-            // 
-            // outputClearBtn
-            // 
-            outputClearBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            outputClearBtn.Location = new Point(48, 615);
-            outputClearBtn.Name = "outputClearBtn";
-            outputClearBtn.Size = new Size(316, 23);
-            outputClearBtn.TabIndex = 10;
-            outputClearBtn.Text = "Clear Output";
-            outputClearBtn.UseVisualStyleBackColor = true;
-            outputClearBtn.Click += outputClear_Click;
             // 
             // nederlandsToolStripMenuItem
             // 
             nederlandsToolStripMenuItem.Name = "nederlandsToolStripMenuItem";
-            nederlandsToolStripMenuItem.Size = new Size(180, 22);
+            nederlandsToolStripMenuItem.Size = new Size(134, 22);
             nederlandsToolStripMenuItem.Text = "Nederlands";
             nederlandsToolStripMenuItem.Click += nederlandsToolStripMenuItem_Click;
+            // 
+            // outputClearBtn
+            // 
+            outputClearBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            outputClearBtn.Location = new Point(44, 615);
+            outputClearBtn.Name = "outputClearBtn";
+            outputClearBtn.Size = new Size(346, 23);
+            outputClearBtn.TabIndex = 10;
+            outputClearBtn.Text = "Clear Output";
+            outputClearBtn.UseVisualStyleBackColor = true;
+            outputClearBtn.Click += outputClear_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(375, 642);
+            ClientSize = new Size(401, 642);
             Controls.Add(outputClearBtn);
             Controls.Add(outputBox);
             Controls.Add(outputLabel);
