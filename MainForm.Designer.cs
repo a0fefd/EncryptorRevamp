@@ -42,6 +42,7 @@
             englisToolStripMenuItem = new ToolStripMenuItem();
             русскийToolStripMenuItem = new ToolStripMenuItem();
             outputClearBtn = new Button();
+            nederlandsToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             // 
             // languageToolStripMenuItem
             // 
-            languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englisToolStripMenuItem, русскийToolStripMenuItem });
+            languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englisToolStripMenuItem, русскийToolStripMenuItem, nederlandsToolStripMenuItem });
             languageToolStripMenuItem.Name = "languageToolStripMenuItem";
             languageToolStripMenuItem.Size = new Size(71, 20);
             languageToolStripMenuItem.Text = "Language";
@@ -158,14 +159,14 @@
             // englisToolStripMenuItem
             // 
             englisToolStripMenuItem.Name = "englisToolStripMenuItem";
-            englisToolStripMenuItem.Size = new Size(119, 22);
+            englisToolStripMenuItem.Size = new Size(180, 22);
             englisToolStripMenuItem.Text = "English";
             englisToolStripMenuItem.Click += englishToolStripMenuItem_Click;
             // 
             // русскийToolStripMenuItem
             // 
             русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
-            русскийToolStripMenuItem.Size = new Size(119, 22);
+            русскийToolStripMenuItem.Size = new Size(180, 22);
             русскийToolStripMenuItem.Text = "Русский";
             русскийToolStripMenuItem.Click += русскийToolStripMenuItem_Click;
             // 
@@ -179,6 +180,13 @@
             outputClearBtn.Text = "Clear Output";
             outputClearBtn.UseVisualStyleBackColor = true;
             outputClearBtn.Click += outputClear_Click;
+            // 
+            // nederlandsToolStripMenuItem
+            // 
+            nederlandsToolStripMenuItem.Name = "nederlandsToolStripMenuItem";
+            nederlandsToolStripMenuItem.Size = new Size(180, 22);
+            nederlandsToolStripMenuItem.Text = "Nederlands";
+            nederlandsToolStripMenuItem.Click += nederlandsToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -224,5 +232,6 @@
         private ToolStripMenuItem englisToolStripMenuItem;
         private ToolStripMenuItem русскийToolStripMenuItem;
         private Button outputClearBtn;
+        private ToolStripMenuItem nederlandsToolStripMenuItem;
     }
 }

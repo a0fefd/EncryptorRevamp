@@ -28,7 +28,15 @@ namespace EncryptorRevamp
             "Результатов:", // Output
             "Удалять текст" // Remove Text
         };
-
+        readonly string[] langNL = {
+            "Sleutel:",
+            "Voorleggen",
+            "Invoer:",
+            "Versleutelen",
+            "Ontcijferen",
+            "Uitvoer:",
+            "Duidelijk Uitvoer"
+        };
 
         public MainForm()
         {
@@ -69,6 +77,11 @@ namespace EncryptorRevamp
             outputBox.Text = output;
         }
 
+        private void outputClear_Click(object sender, EventArgs e)
+        {
+            outputBox.Text = "";
+        }
+
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Size = defaultSize;
@@ -95,9 +108,17 @@ namespace EncryptorRevamp
             outputClearBtn.Text = langRU[6];
         }
 
-        private void outputClear_Click(object sender, EventArgs e)
+        private void nederlandsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            outputBox.Text = "";
+            Size = defaultSize;
+
+            keyLabel.Text = langNL[0];
+            keySubmit.Text = langNL[1];
+            inputLabel.Text = langNL[2];
+            encryptButton.Text = langNL[3];
+            decryptButton.Text = langNL[4];
+            outputLabel.Text = langNL[5];
+            outputClearBtn.Text = langNL[6];
         }
     }
     public class Encryption
